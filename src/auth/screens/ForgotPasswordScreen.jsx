@@ -41,5 +41,4 @@ const ForgotPasswordScreen = ({ navigation }) => {
 };
 
 export default ForgotPasswordScreen;
-
 // 01052741335

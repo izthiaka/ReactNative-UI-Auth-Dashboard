@@ -12,7 +12,6 @@ const VerifyOTPScreen = ({ route, navigation }) => {
     if (timeLeft === 0) {
       // Ici, vous devrez écrire du code pour renvoyer un nouveau OTP au numéro de téléphone de l'utilisateur
       // Vous pouvez utiliser une API de messagerie comme Twilio ou Nexmo pour cela
-      // setTimeLeft(120);
     } else {
       // Compter à rebours de 1 seconde jusqu'à ce que le temps soit écoulé
       const timer = setTimeout(() => {
@@ -27,7 +26,7 @@ const VerifyOTPScreen = ({ route, navigation }) => {
     // Ici, vous devrez écrire du code pour vérifier si le code OTP entré est correct
     // Si c'est le cas, naviguez vers l'écran Dashboard
     // Sinon, affichez un message d'erreur à l'utilisateur
-    navigation.navigate("Dashboard");
+    navigation.navigate("ChangePassword");
   };
 
   const handleResendOTP = () => {
@@ -63,16 +62,20 @@ const VerifyOTPScreen = ({ route, navigation }) => {
         <Text style={styles.buttonText}>Vérifier le code</Text>
       </TouchableOpacity>
       <View style={styles.timerContainer}>
-        <Text style={styles.timer}>
-          Renvoyer un nouveau code dans {minutes}:
-          {seconds < 10 ? `0${seconds}` : seconds}
-        </Text>
-        <TouchableOpacity
-          style={styles.forgotPassword}
-          onPress={handleResendOTP}
-        >
-          <Text style={styles.forgotPasswordText}>Renvoyer un code</Text>
-        </TouchableOpacity>
+        {timeLeft !== 0 ? (
+          <Text style={styles.timer}>
+            Renvoyer un nouveau code dans {minutes}:
+            {seconds < 10 ? `0${seconds}` : seconds}
+          </Text>
+        ) : (
+          <TouchableOpacity
+            style={styles.forgotPassword}
+            onPress={handleResendOTP}
+            disabled={timeLeft !== 0}
+          >
+            <Text style={styles.forgotPasswordText}>Renvoyer un code</Text>
+          </TouchableOpacity>
+        )}
       </View>
     </View>
   );
