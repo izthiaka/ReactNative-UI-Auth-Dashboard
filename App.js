@@ -1,20 +1,46 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import LoginScreen from './src/auth/screens/LoginScreen';
+import ForgotPasswordScreen from './src/auth/screens/ForgotPasswordScreen';
+import VerifyOTPScreen from './src/auth/screens/VerifyOTPScreen';
+// import DashboardScreen from './src/screens/DashboardScreen';
+// import AdminScreen from './src/screens/AdminScreen';
 
-export default function App() {
+const Stack = createStackNavigator();
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Login"
+          component={LoginScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="ForgotPassword"
+          component={ForgotPasswordScreen}
+          options={{ title: 'Mot de passe oublié' }}
+        />
+        <Stack.Screen
+          name="VerifyOTP"
+          component={VerifyOTPScreen}
+          options={{ title: 'Code de validation' }}
+        />
+        {/* <Stack.Screen
+          name="Dashboard"
+          component={DashboardScreen}
+          options={{ title: 'Tableau de bord' }}
+        />
+        <Stack.Screen
+          name="Admin"
+          component={AdminScreen}
+          options={{ title: 'Administration' }}
+        /> */}
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
