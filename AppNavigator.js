@@ -1,10 +1,13 @@
 import React from 'react';
 
 import { createStackNavigator } from '@react-navigation/stack';
+
 import LoginScreen from './src/auth/screens/LoginScreen';
 import ForgotPasswordScreen from './src/auth/screens/ForgotPasswordScreen';
 import VerifyOTPScreen from './src/auth/screens/VerifyOTPScreen';
 import ResetPasswordScreen from './src/auth/screens/ResetPasswordScreen';
+
+import DashboardScreen from './src/dashboard/screens/DashboardScreen';
 
 const Stack = createStackNavigator();
 
@@ -31,17 +34,14 @@ const AppNavigator = () => {
         component={ResetPasswordScreen}
         options={{ headerShown: false }}
       />
-      {/* <Stack.Screen
+
+
+      <Stack.Screen
         name="Dashboard"
         component={DashboardScreen}
-        options={{ title: 'Tableau de bord' }}
+        // options={{ title: 'Dashboard' }}
+        options={{ headerShown: false }}
       />
-      <Stack.Screen
-        name="Admin"
-        component={AdminScreen}
-        options={{ title: 'Administration' }}
-      /> */}
-      {/* </Stack.Navigator> */}
     </Stack.Navigator>
   );
 };

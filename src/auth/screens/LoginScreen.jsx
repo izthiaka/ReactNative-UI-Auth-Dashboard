@@ -8,7 +8,7 @@ const LoginScreen = ({ navigation }) => {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    // TODO: Handle login
+    navigation.navigate("Dashboard");
   };
 
   const handleForgotPassword = () => {
