@@ -137,8 +137,8 @@ const Footer = ({ navigation }) => {
       >
         <Ionicons
           name={isActiveTab("home") ? "home-sharp" : "home-outline"}
-          size={24}
-          color={isActiveTab("home") ? "#fff" : "#fff"}
+          size={25}
+          color={isActiveTab("home") ? "#2196f3" : "#fff"}
         />
       </TouchableOpacity>
       <TouchableOpacity
@@ -150,8 +150,8 @@ const Footer = ({ navigation }) => {
       >
         <Ionicons
           name={isActiveTab("user") ? "person-sharp" : "person-outline"}
-          size={24}
-          color={isActiveTab("user") ? "#fff" : "#fff"}
+          size={25}
+          color={isActiveTab("user") ? "#2196f3" : "#fff"}
         />
       </TouchableOpacity>
       <TouchableOpacity
@@ -162,9 +162,9 @@ const Footer = ({ navigation }) => {
         ]}
       >
         <Ionicons
-          name={isActiveTab("plus") ? "add-circle-sharp" : "add-circle-outline"}
-          size={24}
-          color={isActiveTab("plus") ? "#fff" : "#fff"}
+          name={isActiveTab("plus") ? "game-controller" : "game-controller-outline"}
+          size={25}
+          color={isActiveTab("plus") ? "#2196f3" : "#fff"}
         />
       </TouchableOpacity>
       <TouchableOpacity
@@ -175,9 +175,9 @@ const Footer = ({ navigation }) => {
         ]}
       >
         <Ionicons
-          name={isActiveTab("report") ? "pie-chart" : "pie-chart-sharp"}
-          size={24}
-          color={isActiveTab("report") ? "#fff" : "#fff"}
+          name={isActiveTab("report") ? "pie-chart" : "pie-chart-outline"}
+          size={25}
+          color={isActiveTab("report") ? "#2196f3" : "#fff"}
         />
       </TouchableOpacity>
       <TouchableOpacity
@@ -193,8 +193,8 @@ const Footer = ({ navigation }) => {
               ? "notifications-sharp"
               : "notifications-outline"
           }
-          size={24}
-          color={isActiveTab("notification") ? "#fff" : "#fff"}
+          size={25}
+          color={isActiveTab("notification") ? "#2196f3" : "#fff"}
         />
       </TouchableOpacity>
     </View>
