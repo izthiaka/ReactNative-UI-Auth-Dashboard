@@ -36,16 +36,16 @@ const Footer = ({ navigation }) => {
         />
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => handlePress("user")}
+        onPress={() => handlePress("cash")}
         style={[
           styles.tabButton,
-          isActiveTab("user") && styles.activeTabButton,
+          isActiveTab("cash") && styles.activeTabButton,
         ]}
       >
         <Ionicons
-          name={isActiveTab("user") ? "person-sharp" : "person-outline"}
+          name={isActiveTab("cash") ? "cash" : "cash-outline"}
           size={25}
-          color={isActiveTab("user") ? "#2196f3" : "#fff"}
+          color={isActiveTab("cash") ? "#2196f3" : "#fff"}
         />
       </TouchableOpacity>
       <TouchableOpacity

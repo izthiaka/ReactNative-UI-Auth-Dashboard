@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <View style={styles.container}>
       <View style={styles.leftContainer}>
-        <Avatar.Image size={40} source={require("../../../assets/icon.png")} />
+        {/* <Avatar.Image size={40} source={require("../../../assets/icon.png")} /> */}
         <Text style={styles.title}>GLORIA</Text>
       </View>
       <TouchableOpacity style={styles.tabButton}>

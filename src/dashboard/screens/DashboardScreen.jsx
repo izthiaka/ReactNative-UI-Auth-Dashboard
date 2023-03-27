@@ -1,8 +1,13 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { View, Text } from "react-native";
+import Icon from "react-native-vector-icons/FontAwesome";
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import StatsCard from "../components/StatsCard";
+import ListGamer from "../components/ListGamer";
+
+import styles from "../../styles/dashboard_style";
 
 const DashboardScreen = () => {
   return (
@@ -11,6 +16,8 @@ const DashboardScreen = () => {
       {/* Dashboard Content */}
       <View style={styles.content}>
         <Text style={styles.heading}>Tableau de bord</Text>
+        <StatsCard/>
+        <ListGamer/>
         <Text style={styles.text}>Bienvenue sur votre tableau de bord.</Text>
       </View>
 
@@ -18,35 +25,5 @@ const DashboardScreen = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-  },
-  header: {
-    backgroundColor: "#2f95dc",
-    height: 50,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    paddingHorizontal: 20,
-  },
-  content: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 20,
-  },
-  heading: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 10,
-  },
-  text: {
-    fontSize: 16,
-    marginBottom: 10,
-  },
-});
 
 export default DashboardScreen;
