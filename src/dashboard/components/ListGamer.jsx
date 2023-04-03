@@ -6,12 +6,12 @@ const players = [
   {
     id: 1,
     name: "John Doe",
-    score: 500,
+    score: 1,
   },
   {
     id: 2,
     name: "Jane Doe",
-    score: 400,
+    score: 4,
   },
   // ... 8 autres joueurs
 ];
@@ -25,7 +25,7 @@ const ListGamer = () => {
           <List.Item
             key={player.id}
             title={player.name}
-            description={`Score : ${player.score}`}
+            description={`il ya ${player.score} heures`}
             left={() => <List.Icon icon="account-circle" />}
           />
         ))}
